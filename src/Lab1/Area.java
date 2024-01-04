@@ -1,5 +1,8 @@
 package Lab1;
 
+
+/////question 1
+
 import java.util.Scanner;
 
 class Rectangle {
