@@ -2,7 +2,7 @@ package Lab2;
 
 
 
-//lab 2  1b
+//  1 b
 
 public class Threads extends Thread {
 	
