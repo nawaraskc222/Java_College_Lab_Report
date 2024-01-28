@@ -1,10 +1,10 @@
 package Lab2;
 
 import java.io.File;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
-
 
 ////question 4
 public class WriteFile {

@@ -12,10 +12,8 @@ public class Question1 {
 
 		try {
 			URL uname= new URL(name);
-			
 			System.out.println("Authority"+ uname.getAuthority());
-			System.out.println("Host:"+uname.getHost());
-			
+			System.out.println("Host:"+uname.getHost());			
 			System.out.println("PORT:"+uname.getPort());
 			System.out.println("Path: "+ uname.getPath());
 			System.out.println("Query: "+ uname.getQuery());

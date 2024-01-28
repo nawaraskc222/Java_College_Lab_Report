@@ -1,8 +1,6 @@
 package Lab4;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -12,12 +10,8 @@ public class Question2 {
 		// TODO Auto-generated method stub
 		
         String urlString = "https://beta.openai.com/docs/";
-
-		
-		URL u= new URL(urlString);
-		
-		URLConnection con = u.openConnection();
-		
+		URL u= new URL(urlString);		
+		URLConnection con = u.openConnection();		
 		try {
 			BufferedReader br= new BufferedReader(new InputStreamReader(con.getInputStream()));
 			

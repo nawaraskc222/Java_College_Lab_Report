@@ -1,13 +1,8 @@
 package Lab3;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Question4 {
-
     private static final String URL = "jdbc:mysql://localhost:3306/Question4";
     private static final String USER = "root";
     private static final String PASSWORD = "rootpassword";
@@ -22,7 +17,6 @@ public class Question4 {
             e.printStackTrace();
         }
     }
-
     private static void insertData() throws SQLException {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
         	

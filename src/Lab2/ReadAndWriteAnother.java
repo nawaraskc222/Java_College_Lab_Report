@@ -1,12 +1,9 @@
 package Lab2;
 
-
-
-
 ///question 5
 import java.io.*;
-import java.util.Scanner;
 
+import java.util.Scanner;
 public class ReadAndWriteAnother {
 
 	public static void main(String[] args) throws IOException {
@@ -23,27 +20,19 @@ public class ReadAndWriteAnother {
 			fw= new FileWriter(pathWrite);
 			fw.write(data);
 			fw.close();
-		}
-		
+		}		
 		System.out.println("____________________");
-		
-		
+				
 		File file2= new File(pathWrite);
 		Scanner sc2 = new Scanner(file2);
 		
-		while(sc2.hasNextLine()) {
-			
-			String data= sc2.nextLine();
-			
-			
-			System.out.println(data);
+		while(sc2.hasNextLine()) {			
+			String data= sc2.nextLine();			
+						System.out.println(data);
 			
 		}
-		sc.close();
+		sc.close();		
 		
-		
-		
-
 	}
 
 }

@@ -1,8 +1,6 @@
 package Lab2;
 
-
 ///question 2
-
 import java.util.Scanner;
 //import java.io.Execption;
 import java.io.IOException;

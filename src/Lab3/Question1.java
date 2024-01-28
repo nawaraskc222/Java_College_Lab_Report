@@ -1,18 +1,12 @@
 package Lab3;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+
 
 public class Question1 {
-
     private static final String URL = "jdbc:mysql://localhost:3306/Student";
     private static final String USER = "root";
     private static final String PASSWORD = "rootpassword";
-
     public static void main(String[] args) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -24,7 +18,6 @@ public class Question1 {
             System.out.println(e.getMessage());
         }
     }
-
     private static void deleteData() {
         try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD)) {
             String sql = "DELETE FROM studenttable WHERE roll = ?";
@@ -37,7 +30,6 @@ public class Question1 {
             System.out.println(e.getMessage());
         }
     }
-
     private static void modifyData() {
         try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD)) {
             String sql = "UPDATE studenttable SET name = ?, roll = ?, height = ? WHERE roll = ?";
@@ -53,7 +45,6 @@ public class Question1 {
             System.out.println(e.getMessage());
         }
     }
-
     private static void readData() {
         try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
              Statement stmt = con.createStatement();
@@ -68,10 +59,8 @@ public class Question1 {
             System.out.println(e.getMessage());
         }
     }
-
     private static void insertData() {
         String insertQuery = "INSERT INTO studenttable (name, roll, height) VALUES (?, ?, ?)";
-
         try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD)) {
             // Inserting the first record
             try (PreparedStatement preparedStatement1 = con.prepareStatement(insertQuery)) {
@@ -81,7 +70,6 @@ public class Question1 {
                 int rowsAffected1 = preparedStatement1.executeUpdate();
                 System.out.println(rowsAffected1 + " record(s) inserted");
             }
-
             // Inserting the second record
             try (PreparedStatement preparedStatement2 = con.prepareStatement(insertQuery)) {
                 preparedStatement2.setString(1, "Nisum");

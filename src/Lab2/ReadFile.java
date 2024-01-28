@@ -1,11 +1,9 @@
 package Lab2;
-
+////question 3
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-
-////question 3
 public class ReadFile {
 
 	public static void main(String[] args) throws FileNotFoundException {

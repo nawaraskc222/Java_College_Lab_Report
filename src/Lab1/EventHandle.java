@@ -1,5 +1,5 @@
 package Lab1;
-////question 6
+////question 5
 import java.util.Scanner;
 
 public class EventHandle {
